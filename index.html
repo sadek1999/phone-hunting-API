@@ -10,32 +10,29 @@
 </head>
 <body>
     <header>
-        <h1 class="text-5xl">Phone Hunting API</h1>
+        <h1 class="text-5xl text-center">Phone Hunting API</h1>
 
     </header>
-    <main class="container mx-auto mt-2">
-        <section class="bg-slate-100 p-3 m-3">
-            <input id="search-fild" type="text" placeholder="Search..." class="input input-bordered w-full max-w-xs" />
-            <button onclick="heandalSearch()" class="btn btn-primary">search</button>
-            <input id="search-fild2" type="text" placeholder="search...." class="input input-bordered w-full max-w-xs" />
-            <button onclick="heandalSearch2()" class="btn btn-accent">Search</button>
+    <main class= "mt-5 container mx-auto ">
+      <!-- .........for search the data -->
+    <section class="bg-amber-50 p-4 ">
+        <input type="text" id="search-fild" placeholder="search hear..." class="input input-bordered w-full max-w-xs  " />
+        <button onclick="search()" class="btn btn-accent">search</button>
 
-        </section>
-        <section>
-            <!-- loading spinner -->
-            <div id="loading" class="text-center mt-32 hidden">
-                <span class="loading loading-spinner loading-lg"></span>
-            </div>
-            <!-- search result -->
+    </section> 
+       <!-- .......loading  -->
+       <div id="loding" class="text-center">
+        <span class=" mt-40  loading loading-spinner loading-md"></span>
+       </div>
+      
+    
+
+             <!-- for display data -->
+
+        <section id="display-data" class="  grid grid-cols-1 md:grid-cols-2     lg:grid-cols-3 gap-3 mt-10">
             
-            <div class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 " id="phones-continnar">
-                
-            </div>
-            <div id="but-show-all">
-                <button class="btn btn-accent">Accent</button>
-            </div>
         </section>
-
+        
     </main>
     <script src="js/url.js"></script>
     
