@@ -1,40 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone-Hunting-API</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
+
 <body>
     <header>
         <h1 class="text-5xl text-center">Phone Hunting API</h1>
 
     </header>
-    <main class= "mt-5 container mx-auto ">
-      <!-- .........for search the data -->
-    <section class="bg-amber-50 p-4 ">
-        <input type="text" id="search-fild" placeholder="search hear..." class="input input-bordered w-full max-w-xs  " />
-        <button onclick="search()" class="btn btn-accent">search</button>
+    <main class="mt-5 container mx-auto ">
+        <!-- .........for search the data -->
+        <section class="bg-amber-50 p-4 ">
+            <input type="text" id="search-fild" placeholder="search hear..."
+                class="input input-bordered w-full max-w-xs  " />
+            <button onclick="search()" class="btn btn-accent">search</button>
 
-    </section> 
-       <!-- .......loading  -->
-       <div id="loding" class="text-center">
-        <span class=" mt-40  loading loading-spinner loading-md"></span>
-       </div>
-      
-    
+        </section>
+        <!-- .......loading  -->
+        <div id="loding" class="my-40 text-center hidden">
+            <span class=" mt-40  loading loading-spinner loading-md"></span>
+        </div>
 
-             <!-- for display data -->
+
+
+        <!-- for display data -->
 
         <section id="display-data" class="  grid grid-cols-1 md:grid-cols-2     lg:grid-cols-3 gap-3 mt-10">
-            
+
         </section>
+
+        <!--  show all button  -->
+        <div onclick="forShowAll(true)" id="show-all" class=" my-3 text-center hidden">
+            <button class=" btn btn-success text-white">Show All</button>
+        </div>
+
+        <!-- ......... modal .....-->
+        <!-- Open the modal using ID.showModal() method -->
         
+        <dialog id="my_modal_5" class=" modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box bg-gray-50">
+                <div id="modal-data" class="">
+                    
+
+                </div>
+                <div class="modal-action">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </div>
+            </form>
+        </dialog>
+
     </main>
     <script src="js/url.js"></script>
-    
+
 </body>
+
 </html>
